@@ -1,12 +1,8 @@
 function numberGameInputChanged() {
-	var numberGame = document.getElementByClassName("numberGame")[0];
-	var gameInput = numberGame.getElementByTagName("input")[0];
-	var number = parseInt(gameInput.innerText);
-	if (number > 9999) {
-		gameInput.innerText = "9999";
-		alert("big");
-	} else if (number < 0) {
-		gameInput.innerText = "0000";
-		alert("small");
-	}
+	var gameInput = document.getElementsByClassName("numberGame")[0].getElementsByTagName("input")[0];
+	gameInput.value = gameInput.value.split('').filter(x => x >= "0" && x <= "9").join('').substr(0, 4);
+}
+
+function numberGameInputSubmit() {
+	alert("尚未完成");
 }
