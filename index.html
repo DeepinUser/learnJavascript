@@ -1,11 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charest="utf-8">
 		<title>这是一个测试页面</title>
+		<script charest="utf-8" type="text/javascript" scr="./numberGame.js"></script>
 	</head>
 	<body>
-		<h1>尚未完成</h1>
+		<div class="numberGame">
+			<table class="gameHistory">
+				<tr>
+					<th>次数</th>
+					<th>数字</th>
+					<th>结果</th>
+				</tr>
+			</table>
+			<input type="number" min="0" max="9999" step="1" onchange="numberGameInputChanged()" />
+		</div>
 	</body>
 </html>
 
